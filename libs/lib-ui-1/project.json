@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/lib-ui-1",
+  "sourceRoot": "libs/lib-ui-1/src",
+  "prefix": "nx-cache-problem",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/lib-ui-1"],
+      "options": {
+        "project": "libs/lib-ui-1/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/lib-ui-1/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/lib-ui-1/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/lib-ui-1"],
+      "options": {
+        "jestConfig": "libs/lib-ui-1/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/lib-ui-1/src/**/*.ts",
+          "libs/lib-ui-1/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

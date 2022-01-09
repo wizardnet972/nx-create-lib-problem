@@ -1,0 +1,34 @@
+{
+  "root": "libs/lib-api-2",
+  "sourceRoot": "libs/lib-api-2/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/lib-api-2",
+        "tsConfig": "libs/lib-api-2/tsconfig.lib.json",
+        "packageJson": "libs/lib-api-2/package.json",
+        "main": "libs/lib-api-2/src/index.ts",
+        "assets": ["libs/lib-api-2/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/lib-api-2/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/lib-api-2"],
+      "options": {
+        "jestConfig": "libs/lib-api-2/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

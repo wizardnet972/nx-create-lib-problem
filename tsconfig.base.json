@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-cache-problem/lib-api-1": ["libs/lib-api-1/src/index.ts"],
+      "@nx-cache-problem/lib-api-2": ["libs/lib-api-2/src/index.ts"],
+      "@nx-cache-problem/lib-ui-1": ["libs/lib-ui-1/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

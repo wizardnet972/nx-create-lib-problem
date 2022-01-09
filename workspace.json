@@ -1,4 +1,13 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "lib-api-1": "libs/lib-api-1",
+    "lib-api-2": "libs/lib-api-2",
+    "lib-ui": "libs/lib-ui-1",
+    "nx-api": "apps/nx-api",
+    "nx-storybook": "apps/nx-storybook",
+    "nx-storybook-e2e": "apps/nx-storybook-e2e",
+    "nx-ui": "apps/nx-ui",
+    "nx-ui-e2e": "apps/nx-ui-e2e"
+  }
 }
